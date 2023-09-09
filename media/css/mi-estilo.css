@@ -20,3 +20,31 @@
     padding-right: 60px;
     padding-left: 60px;
 }
+
+#contendor-mi-informacion{
+    width: 100%;
+    display: flex;
+}
+
+#foto{
+    border: solid 2px black;
+    border-top: none;
+    width: 20%;
+}
+
+#mi-informacion{
+    border: solid 2px black;
+    width: 80%;
+    border-top: none;
+    margin-left: 1px;
+    padding-left: 30px;
+}
+
+#mi-informacion h3{
+    margin-bottom: 1px;
+}
+
+#mi-informacion h6{
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
