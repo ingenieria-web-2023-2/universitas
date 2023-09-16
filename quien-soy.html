@@ -9,19 +9,20 @@
     <header>
         <div id="logo" class="bloque-centrado">
             <img src="media/images/logo.png" alt="imagen del logo" />
+            <p>Texto de prueba</p>
         </div>
-        <div id="menu" class="bloque-centrado">
+        <nav id="menu" class="bloque-centrado">
             <a href="ceo.html" id="btn-ceo">CEO</a>
             <a href="#">Nuestra Empresa</a>
             <a href="#">Cotizador</a>
             <a href="DD3D.pdf" target="_blank">Prototipo PDF</a>
-        </div>
+        </nav>
     </header>
-    <div id="contendor-mi-informacion">
-        <div id="foto">
+    <section id="contendor-mi-informacion">
+        <article id="foto">
             <img src="media/images/perfil.png" alt="Imgen de perfil" />
-        </div>
-        <div id="mi-informacion">
+        </article>
+        <article id="mi-informacion">
             <fieldset>
                 <legend>Mi Informacion Personal</legend>
                 <h3>
@@ -58,36 +59,40 @@
                 </ol>
 
             </fieldset>
-        </div>
-    </div>
+        </article>
+    </section>
 
-    <div id="mi-prototipo">
+    <aside id="mi-prototipo">
         <embed id="pdf-proto" title="Prototipo del Universitas" src="DD3D.pdf">
         </embed>
-
         <!--
             <object width="560" height="315" data="https://www.youtube.com/embed/RF0dt08yzfg?si=e9YOYceyK067-9jZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></object> 
             -->
+    </aside>
 
-    </div>
-
-    <div id="mi-cotizador">
+    <section id="mi-cotizador">
         <form action="mi-servidor-php" method="get">
 
             <label>Cantidad</label>
             <input type="text" id="cantidad" name="cantidad"/><br/>
 
             <label>Valor unitario</label>
-            <input type="text" id="valor_unitario" name="valor_unitario"/><br/>
+            <input type="number" id="valor_unitario" name="valor_unitario"/><br/>
 
             <label>Valor total</label><label>$ 0.0</label><br/>
 
             <label>Observaciones</label>
             <textarea></textarea><br/>
+
+            <label>Contraseña</label>
+            <input type="password" name="pass" id="pass">
+
+            <label>Tiempo:</label>
+            <input type="time" name="hora" id="hora">
             
             <input type="submit" value="Enviar"/>
         </form>
-    </div>
+    </section>
 
     <footer>
         Copyrigth © 2023 | Medellín - Antioquía, Colombia | Nuestra Empresa | Contactanos
