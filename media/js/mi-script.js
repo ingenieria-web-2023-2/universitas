@@ -3,6 +3,7 @@
  * Comentarios
  * Esto no se ejecuta
  */
+"use strict";
 console.log("Hola mundo, desde PoliJIC");
 
 // Variables
@@ -12,58 +13,88 @@ const numero1 = 900;
 let nuemero3 = 14.5;
 let mifecha = new Date();
 
-cadena = "Hola Oscar";
-cadena2 = "Hola Valetina!!!!!";
-logica1 = true;
-logica2 = false;
-suma = numero1 + numero2;
+let variable = true;
+
+const cadena = "Hola Oscar";
+const cadena2 = "Hola Valetina!!!!!";
+const logica1 = true;
+const logica2 = false;
+let suma = numero1 + numero2;
 
 console.log("el valor de numero 1 es: ", numero1);
 console.log("el valor de la suma es: ", suma);
 console.log(cadena);
 console.log("mi fecha actua es: ", mifecha);
-
+console.log("el mes de la fecha atual es:", mifecha.getMonth() + 1);
+console.log("el tipo de variable de la fecha es:", typeof mifecha);
+console.log("el tipo de variable de la cadena es:", typeof cadena);
+console.log("el tipo de variable de la variable es:", typeof variable);
 //Estructruas de control
 if (numero1 > numero2) {
-    console.log("numero1 es mayor");
-}else if(numero1 == numero2){
-    console.log("los numeros son iguales");
-}else{
-    console.log("numero2 es mayor");
+  console.log("numero1 es mayor");
+} else if (numero1 == numero2) {
+  console.log("los numeros son iguales");
+} else {
+  console.log("numero2 es mayor");
 }
 
 let contador = 1;
 //Ciclos
 console.log("Ciclo while");
-while(contador <= 10){
-    console.log("contador vale: ", contador);
-    //contador = contador + 1;
-    contador++;
+while (contador <= 10) {
+  console.log("contador vale: ", contador);
+  //contador = contador + 1;
+  contador++;
 }
-
-let contador1 = 1;
+//contador = 11;
 console.log("Ciclo do while");
-do{
-    console.log("contador vale: ", contador1);
-    contador1++;
-}while(contador1 <= 10);
+do {
+  console.log("contador vale: ", contador);
+  contador++;
+} while (contador <= 10);
 
 console.log("Ciclo for");
-for(let i = 1; i <= 100; i++){
-    console.log("i vale: ", i);
+for (let i = 1; i <= 100; i++) {
+  console.log("i vale: ", i);
 }
 
-const mes = prompt("Ingrese el mes: ");
+//const mes = prompt("Ingrese el mes: ");
+const mes = "enero";
 switch (mes) {
-    case "enero":
-        console.log("el mes es enero");
-        break;
-    case "febrero":
-        console.log("el mes es febrero");
-        break;
-    case "marzo":
-        console.log("el mes es marzo");
-        break;
-    default:
-        console.log("el mes no es enero, febrero o marzo");
+  case "enero":
+    console.log("el mes es enero");
+    break;
+  case "febrero":
+    console.log("el mes es febrero");
+    break;
+  case "marzo":
+    console.log("el mes es marzo");
+    break;
+  default:
+    console.log("el mes no es enero, febrero o marzo");
 }
+/*
+const milogo = document.getElementById("logo");
+
+for(let i = 1; i <= 100; i++){
+    if(i % 2 == 0){
+        setTimeout(function(){
+            document.getElementById("logo").style = "background: red";
+        },5000);
+    }else{
+        setTimeout(function(){
+            document.getElementById("logo").style = "background: blue";
+        },5000);
+    }
+}
+*/
+
+let color = 1;
+setInterval(function () {
+  if (color % 2 == 0) {
+    document.getElementById("logo").style = "background: red";
+  } else {
+    document.getElementById("logo").style = "background: blue";
+  }
+  color++;
+}, 5000);
