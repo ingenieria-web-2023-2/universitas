@@ -98,3 +98,42 @@ setInterval(function () {
   }
   color++;
 }, 5000);
+
+
+/**
+ * Programcion funcional.
+ */
+function restarNumero(numero1, numero2) {
+  return numero1 - numero2;
+}
+
+function imprimirMensaje(mensaje) {
+  console.log(mensaje);
+}
+
+const esPar = function (numero) {
+  if (numero % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+let sumaNumeros = (numero1, numero2) => {
+  return numero1 + numero2;
+}
+
+const esPar2 = numero => {
+  return numero % 2 == 0 ? 1 : 0;
+};
+
+
+const funcionClickBotonCalcular = event => {
+  console.log(event);
+  alert("Hola, hiciste clic");
+}
+
+document.getElementById("btn-calcular").addEventListener("click", event => {
+  console.log(event);
+  alert("Hola, hiciste clic con la funcion directa");
+});
