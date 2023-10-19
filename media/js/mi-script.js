@@ -134,6 +134,18 @@ const funcionClickBotonCalcular = event => {
 }
 
 document.getElementById("btn-calcular").addEventListener("click", event => {
-  console.log(event);
-  alert("Hola, hiciste clic con la funcion directa");
+
+  let cantidad = document.getElementById("cantidad").value;
+  let valor_unitario = document.getElementById("valor_unitario").value;
+
+  if(cantidad == ""){
+    alert("Por favor ingrese la cantidad");
+  }else if(valor_unitario == ""){
+    alert("Por favor ingrese el valor unitario");
+  }else{
+    const total = cantidad * valor_unitario;
+    document.querySelector("#lbl_valor_total").innerHTML = "<b>"+total+"</b>";
+  }
+
+  //alert("Hola, hiciste clic con la funcion directa");
 });
