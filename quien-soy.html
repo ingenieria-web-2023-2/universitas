@@ -1,103 +1,111 @@
-<html>
+<!DOCTYPE>
+<html lang="es-CO">
 
 <head>
     <title>¿Quién Soy?</title>
     <link href="media/css/mi-estilo.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header>
-        <div id="logo" class="bloque-centrado">
-            <img src="media/images/logo.png" alt="imagen del logo" />
-            <p>Texto de prueba</p>
-        </div>
+    <main>
+        <header>
+            <div id="logo" class="bloque-centrado">
+                <img src="media/images/logo.png" alt="imagen del logo" />
+                <p>Texto de prueba</p>
+            </div>
+        </header>
         <nav id="menu" class="bloque-centrado">
             <a href="ceo.html" id="btn-ceo">CEO</a>
             <a href="#">Nuestra Empresa</a>
             <a href="#">Cotizador</a>
             <a href="DD3D.pdf" target="_blank">Prototipo PDF</a>
         </nav>
-    </header>
-    <section id="contendor-mi-informacion">
-        <article id="foto">
-            <img src="media/images/perfil.png" alt="Imgen de perfil" />
-        </article>
-        <article id="mi-informacion">
-            <fieldset>
-                <legend>Mi Informacion Personal</legend>
-                <h3>
-                    Hola, soy Carlos David Pérez
-                </h3>
-                <h6><small>Y SOY DISEÑADOR GRAFICO</small></h6>
-                <hr />
-                <p>
-                    ¡Hola! Si estás aquí, es porque quieres saber un poco más sobre mí, por eso, te voy a contar un poco
-                    quién soy, a qué me dedico, y cómo te puedo ayudar.
-                </p>
-                <p>
-                    Nací en Barcelona capital, aunque he vivido toda la vida fuera pero muy cerca de ella. Me gusta
-                    tener la ciudad cerca, pero prefiero los sitios más tranquilos para vivir.
-                </p>
-                <p>
-                    Como no sabía muy bien qué estudiar, cuando llegó la hora de decidir, me puse a estudiar
-                    informática, porque era lo que más me llamaba la atención en aquel momento.
-                </p>
-                <p>
-                    Eso me llevó a trabajar como informático algunos años, cosa que me hizo darme cuenta de que no me
-                    gustaba lo que hacía, ni me veía toda la vida intentando arreglar los marrones de los demás.
-                </p>
-                <p>
-                    Por ese motivo, desde que perdí mi último trabajo, no envié ningún curriculum más y decidí dedicarme
-                    a algo que realmente me gustara.
-                </p>
+        <section id="contendor-mi-informacion">
+            <article id="foto">
+                <img src="media/images/perfil.png" alt="Imgen de perfil" />
+            </article>
+            <article id="mi-informacion">
+                <fieldset>
+                    <legend>Mi Informacion Personal</legend>
+                    <h3>
+                        Hola, soy Carlos David Pérez
+                    </h3>
+                    <h6><small>Y SOY DISEÑADOR GRAFICO</small></h6>
+                    <hr />
+                    <p>
+                        ¡Hola! Si estás aquí, es porque quieres saber un poco más sobre mí, por eso, te voy a contar un
+                        poco
+                        quién soy, a qué me dedico, y cómo te puedo ayudar.
+                    </p>
+                    <p>
+                        Nací en Barcelona capital, aunque he vivido toda la vida fuera pero muy cerca de ella. Me gusta
+                        tener la ciudad cerca, pero prefiero los sitios más tranquilos para vivir.
+                    </p>
+                    <p>
+                        Como no sabía muy bien qué estudiar, cuando llegó la hora de decidir, me puse a estudiar
+                        informática, porque era lo que más me llamaba la atención en aquel momento.
+                    </p>
+                    <p>
+                        Eso me llevó a trabajar como informático algunos años, cosa que me hizo darme cuenta de que no
+                        me
+                        gustaba lo que hacía, ni me veía toda la vida intentando arreglar los marrones de los demás.
+                    </p>
+                    <p>
+                        Por ese motivo, desde que perdí mi último trabajo, no envié ningún curriculum más y decidí
+                        dedicarme
+                        a algo que realmente me gustara.
+                    </p>
 
-                <h3>Idiomas:</h3>
-                <ol reversed="reversed">
-                    <li>Español</li>
-                    <li>Inglés</li>
-                    <li>Aleman</li>
-                </ol>
+                    <h3>Idiomas:</h3>
+                    <ol reversed="reversed">
+                        <li>Español</li>
+                        <li>Inglés</li>
+                        <li>Aleman</li>
+                    </ol>
 
-            </fieldset>
-        </article>
-    </section>
+                </fieldset>
+            </article>
+        </section>
 
-    <aside id="mi-prototipo">
-        <embed id="pdf-proto" title="Prototipo del Universitas" src="DD3D.pdf">
-        </embed>
-        <!--
+        <aside id="mi-prototipo">
+            <embed id="pdf-proto" title="Prototipo del Universitas" src="DD3D.pdf">
+            </embed>
+            <!--
             <object width="560" height="315" data="https://www.youtube.com/embed/RF0dt08yzfg?si=e9YOYceyK067-9jZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></object> 
             -->
-    </aside>
+        </aside>
 
-    <section id="mi-cotizador">
-        <button id="btn-calcular">Calcular</button><br/>
-        <form action="mi-servidor-php" method="get">
+        <section id="mi-cotizador">
+            <button id="btn-calcular">Calcular</button><br />
+            <form action="mi-servidor-php" method="get">
 
-            <label>Cantidad</label>
-            <input type="text" id="cantidad" name="cantidad"/><br/>
+                <label>Cantidad</label>
+                <input type="text" id="cantidad" name="cantidad" /><br />
 
-            <label>Valor unitario</label>
-            <input type="number" id="valor_unitario" name="valor_unitario"/><br/>
+                <label>Valor unitario</label>
+                <input type="number" id="valor_unitario" name="valor_unitario" /><br />
 
-            <label>Valor total</label> $ <label id="lbl_valor_total">0.0</label><br/>
+                <label>Valor total</label> $ <label id="lbl_valor_total">0.0</label><br />
 
-            <label>Observaciones</label>
-            <textarea></textarea><br/>
+                <label>Observaciones</label>
+                <textarea></textarea><br />
 
-            <label>Contraseña</label>
-            <input type="password" name="pass" id="pass">
+                <label>Contraseña</label>
+                <input type="password" name="pass" id="pass">
 
-            <label>Tiempo:</label>
-            <input type="time" name="hora" id="hora">
-            
-            <input type="submit" value="Enviar"/>
-        </form>
-    </section>
+                <label>Tiempo:</label>
+                <input type="time" name="hora" id="hora">
 
-    <footer>
-        Copyrigth © 2023 | Medellín - Antioquía, Colombia | Nuestra Empresa | Contactanos
-    </footer>
+                <input type="submit" value="Enviar" />
+            </form>
+        </section>
+
+        <footer>
+            Copyrigth © 2023 | Medellín - Antioquía, Colombia | Nuestra Empresa | Contactanos
+        </footer>
+    </main>
 </body>
 <script src="media/js/mi-script.js"></script>
+
 </html>
