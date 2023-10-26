@@ -96,6 +96,23 @@ main {
     margin: 30px;
 }
 
+#contenedor-juego{
+    display: flex;
+    justify-content: space-around;
+}
+
+#circulo-1{
+    background-color: orange;
+    padding: 10vh;
+    border-radius: 10vh;
+}
+
+#circulo-2{
+    background-color: blueviolet;
+    padding: 10vh;
+    border-radius: 10vh;
+}
+
 @media (max-width: 600px) {
     #menu{
         flex-direction: column;

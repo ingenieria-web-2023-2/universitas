@@ -133,7 +133,14 @@ const funcionClickBotonCalcular = event => {
   alert("Hola, hiciste clic");
 }
 
-document.getElementById("btn-calcular").addEventListener("click", event => {
+/*document.getElementById("btn-calcular").addEventListener("click", event => {
+
+ 
+
+  //alert("Hola, hiciste clic con la funcion directa");
+});*/
+
+const calcularTotal = () => {
 
   let cantidad = document.getElementById("cantidad").value;
   let valor_unitario = document.getElementById("valor_unitario").value;
@@ -147,5 +154,30 @@ document.getElementById("btn-calcular").addEventListener("click", event => {
     document.querySelector("#lbl_valor_total").innerHTML = "<b>"+total+"</b>";
   }
 
-  //alert("Hola, hiciste clic con la funcion directa");
+};
+
+const calcularTotalConKeyPress = (cantidad, valor_unitario) => {
+  const total = cantidad * valor_unitario;
+  document.querySelector("#lbl_valor_total").innerHTML = "<b>"+total+"</b>";
+};
+
+const definirColorAleatorio = () => {
+  var color = Math.floor(Math.random() * 16777216).toString(16);
+  return '#000000'.slice(0, -color.length) + color;
+};
+
+document.querySelector("#btn-calcular").addEventListener("click", calcularTotal);
+
+document.querySelector("#cantidad").addEventListener("keyup",function(e){
+  calcularTotalConKeyPress(document.querySelector("#cantidad").value, document.querySelector("#valor_unitario").value);
 });
+
+document.querySelector("#valor_unitario").addEventListener("keyup",function(e){
+  calcularTotalConKeyPress(document.querySelector("#cantidad").value, document.querySelector("#valor_unitario").value);
+});
+
+document.querySelector("#circulo-1").addEventListener("mouseover", (e) => {
+  console.log(definirColorAleatorio());
+  document.querySelector("#circulo-2").style = "background: "+definirColorAleatorio();
+});
+
