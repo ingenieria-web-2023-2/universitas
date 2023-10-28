@@ -181,3 +181,62 @@ document.querySelector("#circulo-1").addEventListener("mouseover", (e) => {
   document.querySelector("#circulo-2").style = "background: "+definirColorAleatorio();
 });
 
+document.querySelector("#circulo-2").addEventListener("mouseover", (e) => {
+  document.querySelector("#circulo-1").style = "background: "+definirColorAleatorio();
+});
+
+let numeros = [1,[1,3,5,7,9,11],3,4,5,6,7,8,9,10,true,"hola",4.3];
+
+numeros.unshift(100);
+//numeros.shift();
+numeros.push(10140);
+//numeros.pop();  
+
+/*for(let i = 0; i < numeros.length; i++){
+  console.log(numeros[i]);
+}*/
+
+let datosPersonales = {
+  "nombre": "Oscar",
+  "apellido": "Gomez",
+  "edad": 35,
+  "casado": true,
+  "hijos": [
+    {
+      "nombre": "Valentina",
+      "edad": 7
+    },
+    {
+      "nombre": "Santiago",
+      "edad": 4
+    }
+  ]
+};
+
+console.log("FOR IN");
+for (const key in numeros) {
+  console.log("**************");
+  console.log(key, numeros[key]); 
+  console.log("**************");
+}
+console.log("FOR OF");
+for (let elemento of numeros) {
+  console.log("**************");
+  console.log(elemento); 
+  console.log("**************");
+}
+
+console.log("forEach");
+
+numeros.forEach(function(elemento, indice, arreglo){
+  console.log("**************");
+  console.log(elemento); 
+  console.log(indice); 
+  console.log(arreglo);
+  console.log("**************");
+});
+
+console.log("map");
+
+let numerosMultiplicados = numeros.map(elemento => elemento * 2);
+console.log(numerosMultiplicados);
