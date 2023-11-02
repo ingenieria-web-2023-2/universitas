@@ -185,7 +185,9 @@ document.querySelector("#circulo-2").addEventListener("mouseover", (e) => {
   document.querySelector("#circulo-1").style = "background: "+definirColorAleatorio();
 });
 
-let numeros = [1,[1,3,5,7,9,11],3,4,5,6,7,8,9,10,true,"hola",4.3];
+//let numeros = [1,[1,3,5,7,9,11],3,4,5,6,7,8,9,10,true,"hola",4.3];
+
+let numeros = [1,100,3,4,5,6,7,8,9,10,4.3,4];
 
 numeros.unshift(100);
 //numeros.shift();
@@ -240,3 +242,57 @@ console.log("map");
 
 let numerosMultiplicados = numeros.map(elemento => elemento * 2);
 console.log(numerosMultiplicados);
+
+console.log("sort");
+
+const estudiantes = [
+  {
+    nombre: "Julian",
+    apellido: "Gomez",
+    edad: 19
+  },
+  {
+    nombre: "Oscar",
+    apellido: "Gomez",
+    edad: 35
+  },
+  {
+    nombre: "Leidy",
+    apellido: "Rendon",
+    edad: 17
+  },
+  {
+    nombre: "Valentina",
+    apellido: "Gomez",
+    edad: 15  
+  }   
+];
+
+const comparador = (a, b) => (a - b);
+const comparadorEstudiantes = (estudiante1, estudiante2) => (estudiante2.edad - estudiante1.edad);
+const comparadorLongitudNombreEstudiantes = (estudiante1, estudiante2) => (estudiante1.nombre.length - estudiante2.nombre.length);
+let numerosOrdenados = numeros.toSorted(comparador);
+let estudiantesOrdenados = estudiantes.toSorted(comparadorLongitudNombreEstudiantes);
+
+console.log(numerosOrdenados);
+console.log("Estudiantes");
+console.log(estudiantes);
+console.log(estudiantesOrdenados);
+
+console.log("search");
+const numerosEncontrados = numeros.find(elemento => elemento == 4);
+console.log(numerosEncontrados);
+const estudiantesMayoresEdad = estudiantes.filter(estudiante => estudiante.edad >= 18); 
+console.log(estudiantesMayoresEdad);
+
+let htmlEstudiantes = "";
+estudiantes.forEach(estudiante => {
+  console.log(estudiante.nombre);
+  htmlEstudiantes += `<tr>
+                        <td>${estudiante.nombre}</td>
+                        <td>${estudiante.apellido}</td>
+                        <td>${estudiante.edad}</td>
+                  </tr>`;
+});
+
+document.querySelector(".estudiantes table tbody").innerHTML = htmlEstudiantes;

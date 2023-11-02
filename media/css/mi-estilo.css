@@ -113,6 +113,16 @@ main {
     border-radius: 10vh;
 }
 
+.estudiantes {
+    padding-bottom: 2vh;
+}
+
+.estudiantes table, .estudiantes table td{
+    border: solid 3px #525959;
+    border-collapse: collapse;
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     #menu{
         flex-direction: column;
