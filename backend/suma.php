@@ -47,5 +47,16 @@
      * $_GET
      */
     print_r($_GET);
+
+    /**
+     * $_POST
+     */
+    print_r($_POST);
+
+
+    /**
+     * $_FILES
+     */
+    print_r($_FILES);
     echo "</pre>";
 ?>

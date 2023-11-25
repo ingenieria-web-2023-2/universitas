@@ -42,6 +42,37 @@
                 </tr>
             </tbody>
         </table>
+
+        <form action="http://localhost/universitas/backend/suma.php" method="post"  enctype='multipart/form-data'>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" class="form-control" id="edad" name="edad" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="genero">Género</label>
+                <select class="form-control" id="genero" name="genero" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control-file" id="foto" name="foto" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
     
   </main>
 
